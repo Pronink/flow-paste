@@ -1,27 +1,29 @@
-# Mermaid Paste
+# Flow Paste
 
-Share Mermaid diagrams with a link. No accounts, no database, and no backend servers: the diagram content is compressed directly into the URL.
+Share React Flow diagrams with a link. No accounts, no database, and no backend servers: the diagram content is compressed directly into the URL.
 
-Because everything is encoded in the link, Mermaid Paste does not send your diagram content to an application backend.
+Because everything is encoded in the link, Flow Paste does not send your diagram content to an application backend.
 
-**Demo:** [pronink.github.io/flow-paste](https://pronink.github.io/flow-paste/?m=eJyVVE1z2jAQvedXaLjnD_TGgJswnQBjoJ2cNFtJwZpYkiutmxLIf69kZOMvaOqDMdq3u29X-1bYuYS9BXVH_DPbbbarpyQlp9P9vTmSVTpP0g35QiZFDky4yShq87hYrxfLBzqdz9NkU-EziOAYIkBPMSBdbJOnAGJGI0g9RMagT8lyG3BcugKQZTWBdbqa72ZbOptuk4dV-lz7xPMqNKDYGyvfez6dyhoixnJhBScwDl4sv3smIZHHOjTs1WOlPmN_TNPkcbXbJNfQtqEwfa4qGjYXDo68GDu56_b3WP0Nj9RIWOmDKWGp5GT9rTE5tFLviVAg8_7hi7QOqQYl-pYcrhgKcO7N94P6G8waI_ftRKkEYVb4T04BK9tH9a5egynosgfOfSNcj3y_rq-DuvyPENg_ZRIPQ6Rn1j98lwVlhg_OmSk12kMsoj1_XdrVZHyedDC5TBaFz0FbJbcgTSvPofkI6VBJ6S4egkkFOUGDkFNQgfqA-HmWR8mjUCMVNJX16BfW8JLhiOVXCRrbja-JFVYy0WZU6-d4LXK_m2e1HsZHoDOmKP6gT-yYlQVKo2-QaS4kKJZ22Hd5XhbJ8SqtoeL-TStmuSyEbnipfwuNw_i3b-ENrMhM6cSNG6JGe_1q3mZx2VPH6_GGVebGd8EXNLos4oS30zR7u5sliEL5aj85iDE-WmCvQUq6VD-FHWqo0ppfR2MqYmCtjE71fccN3JtLOPwHtSZ37dbJXU9hS6UtSrWLEpgZfkP2H38BXw4knQ)
+**Demo:** [pronink.github.io/flow-paste](https://pronink.github.io/flow-paste/?m=eJzdmE9vmzAYxu_5FIhekwkIkLDj2t62Hrppl2kHxzaJVYoj2_0TVf3ucyCQYBNqoEIsFyTM-yA_P97X9svbxLLslCLM7a_WH3ljWW_ZVQ4TJMdsLgAT9rQYREAAOVwEyZEErHCyj_yZRR4evJeKLeVEEJpWVa_y1pke73fy3g0cTc3FLsFV6QtBYpOHn7xgg8l6I-RwZXRFGcJsPztv-2pxmhBkXcX-wluFthZ2DxB52oNwvWIek5PZKGCegXwZENiIze8iuAWeuaMCaofHP4PHwJtgIOUxZY9G5n6V0b3ctf38PfzhlBG4MTJ3m4f2ciZHPsXZMIm9Sih8wMw1wvMtD27DJ5irfMJ2eLyP8dAtgERkNfMlNPD8iNnarJJ_ZJEt7C60dFgEQ-U5wpDw_axMnN0Uwb3Med5g7g6J6hm5uwZw0-q7Rb0XKOfz85Q_QYg5N9uPD7EtPLuuZvqTFuWPli4fILx0-i5dDAu2M4Jzn0X2Q-MNtawDCN2gLxvMGGVmW14W2Y_NfKC8iZcLd-H2ZZPQtRGZ7zKuzU6nYfFbpsy5rc7AU0oFic2K4S4PbbPuB8M4k9e_-zgbo_X5HgXPsi5lph_JOX1iENt6HyPv1ljUn-PFbptJwDMl6C5rjspnj4DJLec2RVVbpUSWzgtMKMfoNCePrutMV0YhTWiW5Fc4cnE417-K_iG5YPQBX6vKac2nlpsgfLAN0qdgWtMKGECtUV0y1S2jla3WgKvaghhAVSWXTBS_CiwnbwS0qOCZcoo_Iq2p8ZKqIhoJVM-NwrgTVEXZSK4s0_Po6ip55OziOFo6Thd2irKRXV6NM73FOrLTCrYEp6tGwi6C3mLViZ2iNMy7JnyNqTdagsNkX1Z5M60dPMJTS7MEp2lGws1xonC57MLtoKzbRqjhWafIpiaiNRk3eqix78_nYadkrCrN6Cn9txk7RXQp5OrSkVX-OpgxVfp2M6aK6JKZxoAkZkgz-s0NjZqL_0FD40MQB532m4OyDipYA5KePsm1N4Bv5NzBvuG3g2nQ6qRU-clickiqCEZCe5jzkXQ-U__fHIlVuZS4VMFIiDnOCiK_275eUTYSy82fXyw1OCNfKhdREPidTkOKclJc_07e_wEK6WAB)
+
+**Demo:** [localhost](http://localhost:5173/?m=eJzdmE9vmzAYxu_5FIhekwkIkLDj2t62Hrppl2kHxzaJVYoj2_0TVf3ucyCQYBNqoEIsFyTM-yA_P97X9svbxLLslCLM7a_WH3ljWW_ZVQ4TJMdsLgAT9rQYREAAOVwEyZEErHCyj_yZRR4evJeKLeVEEJpWVa_y1pke73fy3g0cTc3FLsFV6QtBYpOHn7xgg8l6I-RwZXRFGcJsPztv-2pxmhBkXcX-wluFthZ2DxB52oNwvWIek5PZKGCegXwZENiIze8iuAWeuaMCaofHP4PHwJtgIOUxZY9G5n6V0b3ctf38PfzhlBG4MTJ3m4f2ciZHPsXZMIm9Sih8wMw1wvMtD27DJ5irfMJ2eLyP8dAtgERkNfMlNPD8iNnarJJ_ZJEt7C60dFgEQ-U5wpDw_axMnN0Uwb3Med5g7g6J6hm5uwZw0-q7Rb0XKOfz85Q_QYg5N9uPD7EtPLuuZvqTFuWPli4fILx0-i5dDAu2M4Jzn0X2Q-MNtawDCN2gLxvMGGVmW14W2Y_NfKC8iZcLd-H2ZZPQtRGZ7zKuzU6nYfFbpsy5rc7AU0oFic2K4S4PbbPuB8M4k9e_-zgbo_X5HgXPsi5lph_JOX1iENt6HyPv1ljUn-PFbptJwDMl6C5rjspnj4DJLec2RVVbpUSWzgtMKMfoNCePrutMV0YhTWiW5Fc4cnE417-K_iG5YPQBX6vKac2nlpsgfLAN0qdgWtMKGECtUV0y1S2jla3WgKvaghhAVSWXTBS_CiwnbwS0qOCZcoo_Iq2p8ZKqIhoJVM-NwrgTVEXZSK4s0_Po6ip55OziOFo6Thd2irKRXV6NM73FOrLTCrYEp6tGwi6C3mLViZ2iNMy7JnyNqTdagsNkX1Z5M60dPMJTS7MEp2lGws1xonC57MLtoKzbRqjhWafIpiaiNRk3eqix78_nYadkrCrN6Cn9txk7RXQp5OrSkVX-OpgxVfp2M6aK6JKZxoAkZkgz-s0NjZqL_0FD40MQB532m4OyDipYA5KePsm1N4Bv5NzBvuG3g2nQ6qRU-clickiqCEZCe5jzkXQ-U__fHIlVuZS4VMFIiDnOCiK_275eUTYSy82fXyw1OCNfKhdREPidTkOKclJc_07e_wEK6WAB)
 
 ## What It Does
 
-Mermaid Paste is a small web app for writing, previewing, and sharing Mermaid diagrams. As you edit a diagram, the app generates a URL with the compressed source code in the `m` query parameter. You can paste that URL into Slack, GitHub, docs, or any chat, and whoever opens it will see the same rendered diagram.
+Flow Paste is a small web app for writing, previewing, and sharing React Flow diagrams. As you edit a diagram, the app generates a URL with the compressed source code in the `m` query parameter. You can paste that URL into Slack, GitHub, docs, or any chat, and whoever opens it will see the same rendered diagram.
 
 The goal is to make sharing a diagram feel as simple as sharing a paste, without relying on a backend.
 
 ## Features
 
-- Mermaid diagrams rendered directly in the browser.
+- React Flow diagrams rendered directly in the browser.
 - Self-contained links: the diagram is compressed into the query string.
-- Slide-out editor for updating the Mermaid source.
+- Slide-out editor for updating the React Flow source.
 - Read-only view when opening a shared link.
 - Mouse wheel zoom and touch pinch zoom.
 - Draggable canvas for navigating large diagrams.
 - Light/dark mode persisted in `localStorage`.
-- Error messages when Mermaid cannot parse the diagram.
+- Error messages when React Flow cannot parse the diagram.
 
 ## How It Works
 
@@ -31,7 +33,7 @@ The main flow is:
 
 1. The app reads the `?m=` parameter on startup.
 2. `src/compression.ts` decodes the base64url value and decompresses it with DEFLATE using `pako`.
-3. `src/MermaidViewer.tsx` validates and renders the source with `mermaid`.
+3. `src/ReactFlowViewer.tsx` validates and renders the source with `mermaid`.
 4. `src/Editor.tsx` lets you edit the text and toggle the editor panel.
 5. While the editor is open, `src/App.tsx` compresses the current source and updates the URL with `history.replaceState`.
 6. `src/DraggableDiv.tsx` wraps the diagram with drag, wheel zoom, and pinch zoom support.

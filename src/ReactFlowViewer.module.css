@@ -1,6 +1,6 @@
-.mermaidContainer {
-  min-height: 100vh;
-  min-width: 100vw;
+.reactFlowContainer {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 8px 10px);

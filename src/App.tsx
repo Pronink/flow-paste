@@ -1,18 +1,11 @@
-import { MermaidViewer } from './MermaidViewer.tsx'
-import { DraggableZoom } from './DraggableDiv.tsx'
+import { ReactFlowViewer } from './ReactFlowViewer.tsx'
 import { useEffect, useState } from 'react'
 import styles from './App.module.css'
 import { Editor } from './Editor.tsx'
-import mermaid from 'mermaid'
 import { compressToUrl, decompressFromUrl } from './compression.ts'
 
-mermaid.initialize({
-  startOnLoad: false,
-  theme: 'neutral'
-})
-
 export const App = () => {
-  const [mermaidCode, setMermaidCode] = useState<string>('')
+  const [reactFlowCode, setReactFlowCode] = useState<string>('')
   const [isEditorVisible, setIsEditorVisible] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string>()
   const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('darkMode') === 'true')
@@ -26,7 +19,7 @@ export const App = () => {
       const decompressed = decompressFromUrl(compressed)
 
       if (decompressed) {
-        setMermaidCode(decompressed)
+        setReactFlowCode(decompressed)
         setIsEditorVisible(false)
         return
       }
@@ -41,22 +34,20 @@ export const App = () => {
 
     let newUrl = window.location.origin + window.location.pathname
 
-    if (mermaidCode) {
-      newUrl += `?m=${compressToUrl(mermaidCode)}`
+    if (reactFlowCode) {
+      newUrl += `?m=${compressToUrl(reactFlowCode)}`
     }
 
     window.history.replaceState(null, '', newUrl)
-  }, [mermaidCode, isEditorVisible])
+  }, [reactFlowCode, isEditorVisible])
 
   return (
     <div className={`${styles.root}${isDarkMode ? ' dark-mode' : ''}`}>
-      <DraggableZoom>
-        <MermaidViewer mermaidCode={mermaidCode} onError={setErrorMessage} />
-      </DraggableZoom>
+      <ReactFlowViewer code={reactFlowCode} onError={setErrorMessage} />
       <Editor
-        code={mermaidCode}
+        code={reactFlowCode}
         onChangeCode={
-          isEditorVisible ? (code) => setMermaidCode(code) : undefined
+          isEditorVisible ? (code) => setReactFlowCode(code) : undefined
         }
         isVisible={isEditorVisible}
         setIsVisible={setIsEditorVisible}
