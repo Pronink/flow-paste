@@ -1,0 +1,25 @@
+.root {
+  width: 100dvw;
+  height: 100dvh;
+  position: relative;
+  box-shadow: inset 0 0 30px -10px black;
+  :global(.dark-mode)& {
+    box-shadow: none;
+  }
+}
+
+.error {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(244 67 54 / 80%);
+  backdrop-filter: blur(var(--blurryness));
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+  font-family: sans-serif;
+  max-width: 300px;
+  word-break: break-word;
+}

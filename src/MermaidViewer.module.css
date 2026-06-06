@@ -1,0 +1,10 @@
+.mermaidContainer {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 8px 10px);
+  :global(.dark-mode) & {
+    filter: invert() drop-shadow(rgba(0, 0, 0, 0.1) 0px 8px 10px);
+  }
+}
