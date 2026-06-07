@@ -10,7 +10,6 @@ const codemirrorExtensions = [json()]
 
 export const Editor = (props: {
   code: string
-  isEditable: boolean,
   isVisible: boolean
   setIsVisible: (isVisible: boolean) => void
   onChangeCode: ((code: string) => void) | undefined
@@ -38,15 +37,15 @@ export const Editor = (props: {
           }
         )
       }>
-      {props.isEditable && <div className={styles.textarea}>
+      <div className={styles.textarea}>
         <CodeMirror
           value={props.code}
           onChange={(e) => props.onChangeCode?.(e)}
           spellCheck="false"
           extensions={codemirrorExtensions}
         />
-      </div>}
-      {props.isEditable && <button
+      </div>
+      <button
         type="button"
         title={props.isVisible ? 'Close editor' : 'Open editor'}
         onClick={() => props.setIsVisible(!props.isVisible)}
@@ -67,7 +66,7 @@ export const Editor = (props: {
               <FontAwesomeIcon icon={faPencil} style={{ transform: 'translateY(1px)' }} />
           }
         </div>
-      </button>}
+      </button>
       <button
         type="button"
         title="Toggle dark theme"

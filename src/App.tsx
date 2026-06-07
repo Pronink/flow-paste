@@ -5,8 +5,6 @@ import { Editor } from './Editor.tsx'
 import { compressToUrl, decompressFromUrl } from './compression.ts'
 
 export const App = () => {
-  const params = new URLSearchParams(window.location.search)
-  const isEditable = !!params.get('editable')
   const [reactFlowCode, setReactFlowCode] = useState<string>('')
   const [isEditorVisible, setIsEditorVisible] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string>()
@@ -15,7 +13,7 @@ export const App = () => {
   // Load URL at startup
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
-    const compressed = params.get('m')
+    const compressed = params.get('data')
 
     if (compressed) {
       const decompressed = decompressFromUrl(compressed)
@@ -37,9 +35,9 @@ export const App = () => {
     const url = new URL(window.location.href)
 
     if (reactFlowCode) {
-      url.searchParams.set('m', compressToUrl(reactFlowCode))
+      url.searchParams.set('data', compressToUrl(reactFlowCode))
     } else {
-      url.searchParams.delete('m')
+      url.searchParams.delete('data')
     }
 
     window.history.replaceState(null, '', url.toString())
@@ -47,10 +45,9 @@ export const App = () => {
 
   return (
     <div className={`${styles.root}${isDarkMode ? ' dark-mode' : ''}`}>
-      <ReactFlowViewer code={reactFlowCode} isEditable={isEditable} onError={setErrorMessage} />
+      <ReactFlowViewer code={reactFlowCode} onError={setErrorMessage} />
       <Editor
         code={reactFlowCode}
-        isEditable={isEditable}
         onChangeCode={
           isEditorVisible ? (code) => setReactFlowCode(code) : undefined
         }

@@ -8,6 +8,7 @@ import {
   type NodeChange,
   type EdgeChange,
   type OnNodeDrag,
+  Background,
 } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 
@@ -25,7 +26,6 @@ type ReactFlowCode = {
 
 export const ReactFlowViewer = (props: {
   code: string,
-  isEditable: boolean,
   onError: (error: string) => void
 }) => {
   const [nodes, setNodes] = useState<Node[]>([])
@@ -134,13 +134,13 @@ export const ReactFlowViewer = (props: {
         selectNodesOnDrag={false}
         multiSelectionKeyCode="Shift"
         contentEditable={false}
-        nodesDraggable={props.isEditable}
+        nodesDraggable={true}
         nodesConnectable={false}
         elementsSelectable={false}
         proOptions={{ hideAttribution: true }}
       >
-        {/*<Background />*/}
-        {/*      <Controls />*/}
+        <Background />
+        {/*<Controls />*/}
         {/*<MiniMap />*/}
       </ReactFlow>
     </div>
