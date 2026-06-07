@@ -14,6 +14,7 @@ body {
 }
 
 :root {
+  --background: #f4f4f4;
   --hairline: 1px;
   --react-flow-accent: #999999;
   --blurryness: 40px;
@@ -34,11 +35,34 @@ html {
   scrollbar-color: var(--react-flow-accent) transparent;
 }
 
+.react-flow {
+  --xy-background-color: var(--background);
+}
+
+.react-flow__node {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  flex-direction: column;
+  white-space: pre-line;
+}
+
+.react-flow__handle {
+  visibility: hidden;
+}
+
+.react-flow__node-default {
+  width: auto;
+}
 
 /* xyflow theme */
+/*
 
 .react-flow {
-  --xy-background-color: #f7f9fb;
+  --xy-background-color: var(--background);
   --xy-theme-selected: #f57dbd;
   --xy-theme-hover: #c5c5c5;
   --xy-theme-edge-hover: black;
@@ -139,3 +163,4 @@ html {
   width: 5px;
   height: 5px;
 }
+*/

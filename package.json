@@ -12,16 +12,17 @@
     "postinstall": "node scripts/copy-libavoid-wasm.cjs"
   },
   "dependencies": {
+    "@codemirror/lang-json": "^6.0.2",
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
     "@fortawesome/free-regular-svg-icons": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/react-fontawesome": "^3.3.1",
+    "@uiw/react-codemirror": "^4.25.10",
     "avoid-nodes-edge": "^0.3.1",
     "pako": "^2.1.0",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "reactflow": "^11.11.4"
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

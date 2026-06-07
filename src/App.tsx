@@ -5,6 +5,8 @@ import { Editor } from './Editor.tsx'
 import { compressToUrl, decompressFromUrl } from './compression.ts'
 
 export const App = () => {
+  const params = new URLSearchParams(window.location.search)
+  const isEditable = !!params.get('editable')
   const [reactFlowCode, setReactFlowCode] = useState<string>('')
   const [isEditorVisible, setIsEditorVisible] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string>()
@@ -32,20 +34,23 @@ export const App = () => {
   useEffect(() => {
     if (!isEditorVisible) return
 
-    let newUrl = window.location.origin + window.location.pathname
+    const url = new URL(window.location.href)
 
     if (reactFlowCode) {
-      newUrl += `?m=${compressToUrl(reactFlowCode)}`
+      url.searchParams.set('m', compressToUrl(reactFlowCode))
+    } else {
+      url.searchParams.delete('m')
     }
 
-    window.history.replaceState(null, '', newUrl)
+    window.history.replaceState(null, '', url.toString())
   }, [reactFlowCode, isEditorVisible])
 
   return (
     <div className={`${styles.root}${isDarkMode ? ' dark-mode' : ''}`}>
-      <ReactFlowViewer code={reactFlowCode} onError={setErrorMessage} />
+      <ReactFlowViewer code={reactFlowCode} isEditable={isEditable} onError={setErrorMessage} />
       <Editor
         code={reactFlowCode}
+        isEditable={isEditable}
         onChangeCode={
           isEditorVisible ? (code) => setReactFlowCode(code) : undefined
         }
