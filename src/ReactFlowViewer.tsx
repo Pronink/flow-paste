@@ -12,12 +12,12 @@ import {
 } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 
-import { AvoidNodesEdge } from 'avoid-nodes-edge/edge'
 import { useAvoidNodesRouterFromWorker } from 'avoid-nodes-edge'
+import { CustomEdge } from './custom-flow-components/CustomEdge'
 import styles from './ReactFlowViewer.module.css'
 
 // Register the custom edge type
-const edgeTypes = { avoidNodes: AvoidNodesEdge }
+const edgeTypes = { avoidNodes: CustomEdge }
 
 type ReactFlowCode = {
   nodes?: Node[]
