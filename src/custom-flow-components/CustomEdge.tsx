@@ -9,7 +9,7 @@ import {
   useAvoidNodesEdgePath,
   type AvoidNodesEdgeData,
 } from 'avoid-nodes-edge'
-import { constrastColor, darkenColor, lightenColor } from '../utils/ColorManipulation.ts'
+import { darkenColor, lightenColor } from '../utils/ColorManipulation.ts'
 
 /**
  * Extra label-styling fields not supported by the upstream edge.
